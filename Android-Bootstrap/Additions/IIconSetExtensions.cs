@@ -15,11 +15,12 @@ namespace Com.Beardedhen.Androidbootstrap.Font
 {
     public static partial class IIconSetExtensions
     {
-        public static string FontPath(this Com.Beardedhen.Androidbootstrap.Font.IIconSet self)
-        {
-            global::Java.Lang.ICharSequence __result = self.FontPathFormatted();
-            var __rsval = __result?.ToString();
-            return __rsval;
-        }
+        //public static string FontPath(this Com.Beardedhen.Androidbootstrap.Font.IIconSet self)
+        //{
+
+        //    global::Java.Lang.ICharSequence __result = self.FontPathFormatted();
+        //    var __rsval = __result?.ToString();
+        //    return __rsval;
+        //}
     }
 }

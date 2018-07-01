@@ -71,6 +71,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Additions\BootstrapButtonGroup.cs" />
+    <Compile Include="Additions\BootstrapProgressBarGroup.cs" />
     <Compile Include="Additions\IIconSetExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
