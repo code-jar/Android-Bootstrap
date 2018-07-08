@@ -1,0 +1,7 @@
+﻿If you compile an exception like 
+Com.Beardedhen.Androidbootstrap.Font.IIconSetExtensions
+public static string FontPath (this Com.Beardedhen.Androidbootstrap.Font.IIconSet self,)
+
+please modify {Solution}/{Generation configuration(release|debug)}/Com.Beardedhen.Androidbootstrap.Font.IIconSet.cs like:
+public static string FontPath (this Com.Beardedhen.Androidbootstrap.Font.IIconSet self)
+build project (Do not rebuild)

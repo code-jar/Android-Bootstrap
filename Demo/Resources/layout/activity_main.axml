@@ -13,7 +13,7 @@
             style="@style/home_button"
             app:bootstrapBrand="danger"
             app:bootstrapSize="xl"
-            app:bootstrapText="{fa-github} Fork me on Github {fa-heart}"
+            app:bootstrapText="{fa_github} Fork me on Github {fa_heart}"
             app:showOutline="false" />
         <View
             android:layout_width="match_parent"

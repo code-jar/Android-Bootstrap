@@ -14,6 +14,7 @@ using Demo.Utils;
 
 namespace Demo.Activites
 {
+    [Activity(Label = "BootstrapAlertExample")]
     public class BootstrapAlertExample : BaseActivity
     {
 

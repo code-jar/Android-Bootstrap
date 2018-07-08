@@ -10,7 +10,6 @@ using Android.Runtime;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
-using Butterknife;
 
 namespace Demo.Activites
 {
@@ -28,7 +27,15 @@ namespace Demo.Activites
 
             if (scrollView != null)
             {
-                scrollView.AddView(LayoutInflater.From(this).Inflate(GetContentLayoutId(), scrollView, false));
+                try
+                {
+                    scrollView.AddView(LayoutInflater.From(this).Inflate(GetContentLayoutId(), scrollView, false));
+                }
+                catch (Exception e)
+                {
+
+                    throw;
+                }
             }
 
             //ButterKnife.Bind(this);

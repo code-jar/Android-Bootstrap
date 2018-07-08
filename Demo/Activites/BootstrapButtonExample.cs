@@ -16,6 +16,7 @@ using Demo.Utils;
 
 namespace Demo.Activites
 {
+    [Activity(Label = "BootstrapButtonExample")]
     public class BootstrapButtonExample : BaseActivity
     {
         private DefaultBootstrapSize size = DefaultBootstrapSize.Lg;
@@ -35,11 +36,9 @@ namespace Demo.Activites
             var exampleTheme = FindViewById<BootstrapButton>(Resource.Id.bbutton_example_theme);
             var exampleCustomStyle = FindViewById<BootstrapButton>(Resource.Id.example_bbutton_custom_style);
 
-            //Butterknife.ButterKnife.Bind(this, exampleCorners);
-
 
             // create a custom bootstrap size
-            exampleCustomStyle.SetBootstrapSize(DefaultBootstrapSize.ValueOf("3.0f"));
+            exampleCustomStyle.SetBootstrapSize(DefaultBootstrapSize.Sm);
 
             // create a Bootstrap Theme with holo colors
             exampleCustomStyle.BootstrapBrand = new CustomBootstrapStyle(this);
@@ -49,62 +48,12 @@ namespace Demo.Activites
             exampleOutline.SetOnClickListener(new ViewOnClick(v => { exampleOutline.ShowOutline = !exampleOutline.ShowOutline; }));
             exampleSize.SetOnClickListener(new ViewOnClick(v =>
             {
-                if (size == DefaultBootstrapSize.Xs)
-                {
-                    size = DefaultBootstrapSize.Sm;
-                }
-                else if (size == DefaultBootstrapSize.Sm)
-                {
-                    size = DefaultBootstrapSize.Md;
-                }
-                else if (size == DefaultBootstrapSize.Md)
-                {
-                    size = DefaultBootstrapSize.Lg;
-                }
-                else if (size == DefaultBootstrapSize.Lg)
-                {
-                    size = DefaultBootstrapSize.Xl;
-                }
-                else if (size == DefaultBootstrapSize.Xl)
-                {
-                    size = DefaultBootstrapSize.Xs;
-                }
-
+                size = size.ChangeBootstrapSize();
                 exampleSize.SetBootstrapSize(size);
             }));
             exampleTheme.SetOnClickListener(new ViewOnClick(v =>
             {
-                var brand = exampleTheme.BootstrapBrand;
-
-                if (brand == DefaultBootstrapBrand.Primary)
-                {
-                    exampleTheme.BootstrapBrand = DefaultBootstrapBrand.Success;
-                }
-                else if (brand == DefaultBootstrapBrand.Success)
-                {
-                    exampleTheme.BootstrapBrand = DefaultBootstrapBrand.Warning;
-                }
-                else if (brand == DefaultBootstrapBrand.Warning)
-                {
-                    exampleTheme.BootstrapBrand = DefaultBootstrapBrand.Danger;
-                }
-                else if (brand == DefaultBootstrapBrand.Danger)
-                {
-                    exampleTheme.BootstrapBrand = DefaultBootstrapBrand.Info;
-                }
-                else if (brand == DefaultBootstrapBrand.Info)
-                {
-                    exampleTheme.BootstrapBrand = DefaultBootstrapBrand.Secondary;
-                }
-                else if (brand == DefaultBootstrapBrand.Secondary)
-                {
-                    exampleTheme.BootstrapBrand = DefaultBootstrapBrand.Regular;
-                }
-                else if (brand == DefaultBootstrapBrand.Regular)
-                {
-                    exampleTheme.BootstrapBrand = DefaultBootstrapBrand.Primary;
-                }
-
+                exampleTheme.ChangeBootstrapBrand();
             }));
 
         }

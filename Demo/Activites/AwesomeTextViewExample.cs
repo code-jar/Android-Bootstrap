@@ -14,6 +14,7 @@ using Demo.Utils;
 
 namespace Demo.Activites
 {
+    [Activity(Label = "AwesomeTextViewExample")]
     public class AwesomeTextViewExample : BaseActivity
     {
         private AwesomeTextView exampleChange;
@@ -36,8 +37,6 @@ namespace Demo.Activites
         {
             base.OnCreate(savedInstanceState);
 
-            SetupFontAwesomeText();
-
             exampleChange = FindViewById<AwesomeTextView>(Resource.Id.example_fa_text_change);
             exampleChange.SetOnClickListener(new ViewOnClick(v =>
             {
@@ -55,6 +54,8 @@ namespace Demo.Activites
             }));
             exampleBuilder = FindViewById<AwesomeTextView>(Resource.Id.example_fa_text_builder);
             mixAndMatch = FindViewById<AwesomeTextView>(Resource.Id.example_mix_and_match);
+
+            SetupFontAwesomeText();
         }
 
 

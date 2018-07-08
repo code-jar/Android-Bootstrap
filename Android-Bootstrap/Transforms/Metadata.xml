@@ -15,9 +15,6 @@
   <attr path="/api/package[@name='com.beardedhen.androidbootstrap']/class[@name='BootstrapCircleThumbnail']/method[@name='setScaleType' and count(parameter)=1 and parameter[1][@type='android.widget.ImageView.ScaleType']]" name="name">setScaleTypeValue</attr>
 
   <remove-node path="/api/package[@name='com.beardedhen.androidbootstrap']/class[@name='BootstrapProgressBarGroup']/method[@name='setOrientation' and count(parameter)=1 and parameter[1][@type='int']]" />
-
   <remove-node path="/api/package[@name='com.beardedhen.androidbootstrap']/class[@name='BootstrapButtonGroup']/method[@name='setOrientation' and count(parameter)=1 and parameter[1][@type='int']]" />
-
-  <remove-node path="/api/package[@name='com.beardedhen.androidbootstrap.font']/interface[@name='IconSet']/method[@name='fontPath' and count(parameter)=0]" />
 
 </metadata>

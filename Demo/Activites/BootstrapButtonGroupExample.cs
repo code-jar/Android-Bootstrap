@@ -15,6 +15,7 @@ using Demo.Utils;
 
 namespace Demo.Activites
 {
+    [Activity(Label = "BootstrapButtonGroupExample")]
     public class BootstrapButtonGroupExample : BaseActivity
     {
         private DefaultBootstrapSize size = DefaultBootstrapSize.Md;
@@ -100,62 +101,12 @@ namespace Demo.Activites
             }));
             FindViewById<Button>(Resource.Id.bbutton_group_brand_change_btn).SetOnClickListener(new ViewOnClick(v =>
             {
-                var brand = brandChange.BootstrapBrand;
-
-                if (brand == DefaultBootstrapBrand.Primary)
-                {
-                    brandChange.BootstrapBrand = DefaultBootstrapBrand.Success;
-                }
-                else if (brand == DefaultBootstrapBrand.Success)
-                {
-                    brandChange.BootstrapBrand = DefaultBootstrapBrand.Info;
-                }
-                else if (brand == DefaultBootstrapBrand.Info)
-                {
-                    brandChange.BootstrapBrand = DefaultBootstrapBrand.Warning;
-                }
-                else if (brand == DefaultBootstrapBrand.Warning)
-                {
-                    brandChange.BootstrapBrand = DefaultBootstrapBrand.Danger;
-                }
-                else if (brand == DefaultBootstrapBrand.Danger)
-                {
-                    brandChange.BootstrapBrand = DefaultBootstrapBrand.Secondary;
-                }
-                else if (brand == DefaultBootstrapBrand.Secondary)
-                {
-                    brandChange.BootstrapBrand = DefaultBootstrapBrand.Regular;
-                }
-                else if (brand == DefaultBootstrapBrand.Regular)
-                {
-                    brandChange.BootstrapBrand = DefaultBootstrapBrand.Primary;
-                }
-
+                brandChange.ChangeBootstrapBrand();
 
             }));
             FindViewById<Button>(Resource.Id.bbutton_group_size_change_btn).SetOnClickListener(new ViewOnClick(v =>
             {
-                if (size == DefaultBootstrapSize.Xs)
-                {
-                    size = DefaultBootstrapSize.Sm;
-                }
-                else if (size == DefaultBootstrapSize.Sm)
-                {
-                    size = DefaultBootstrapSize.Md;
-                }
-                else if (size == DefaultBootstrapSize.Md)
-                {
-                    size = DefaultBootstrapSize.Lg;
-                }
-                else if (size == DefaultBootstrapSize.Lg)
-                {
-                    size = DefaultBootstrapSize.Xl;
-                }
-                else if (size == DefaultBootstrapSize.Xl)
-                {
-                    size = DefaultBootstrapSize.Xs;
-                }
-
+                size = size.ChangeBootstrapSize();
                 sizeChange.SetBootstrapSize(size);
             }));
         }

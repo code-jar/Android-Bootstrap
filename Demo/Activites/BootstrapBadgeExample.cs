@@ -14,6 +14,7 @@ using Demo.Utils;
 
 namespace Demo.Activites
 {
+    [Activity(Label = "BootstrapBadgeExample")]
     public class BootstrapBadgeExample : BaseActivity
     {
 
@@ -28,7 +29,7 @@ namespace Demo.Activites
 
             var xmlBadgeButton = FindViewById<BootstrapButton>(Resource.Id.xml_badge_button);
             var javaBadgeButton = FindViewById<BootstrapButton>(Resource.Id.java_badge_button);
-            var lonelyBadge = FindViewById<BootstrapButton>(Resource.Id.lonely_badge);
+            var lonelyBadge = FindViewById<BootstrapBadge>(Resource.Id.lonely_badge);
 
             var badgeThird = new BootstrapBadge(this) { BadgeText = "Hi!" };
 
