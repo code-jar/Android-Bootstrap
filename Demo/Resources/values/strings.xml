@@ -1,5 +1,5 @@
 <resources>
-  <string name="app_name">Demo</string>
+  <string name="app_name">AndroidBootstrapDemo</string>
   <string name="action_settings">Settings</string>
 
   <array name="bootstrap_dropdown_example_data">
